@@ -1,0 +1,21 @@
+position,badge_url,name,games_played,games_won,games_drawn,games_lost,goals_for,goals_against,goal_difference,points
+1,https://resources.premierleague.com/premierleague25/badges/43.svg,Manchester City,38,28,5,5,93,29,64,89
+2,https://resources.premierleague.com/premierleague25/badges/1.svg,Manchester United,38,28,5,5,89,33,56,89
+3,https://resources.premierleague.com/premierleague25/badges/3.svg,Arsenal,38,21,7,10,74,49,25,70
+4,https://resources.premierleague.com/premierleague25/badges/6.svg,Tottenham Hotspur,38,20,9,9,66,41,25,69
+5,https://resources.premierleague.com/premierleague25/badges/4.svg,Newcastle United,38,19,8,11,56,51,5,65
+6,https://resources.premierleague.com/premierleague25/badges/8.svg,Chelsea,38,18,10,10,65,46,19,64
+7,https://resources.premierleague.com/premierleague25/badges/11.svg,Everton,38,15,11,12,50,40,10,56
+8,https://resources.premierleague.com/premierleague25/badges/14.svg,Liverpool,38,14,10,14,47,40,7,52
+9,https://resources.premierleague.com/premierleague25/badges/54.svg,Fulham,38,14,10,14,48,51,-3,52
+10,https://resources.premierleague.com/premierleague25/badges/35.svg,West Bromwich Albion,38,13,8,17,45,52,-7,47
+11,https://resources.premierleague.com/premierleague25/badges/80.svg,Swansea City,38,12,11,15,44,51,-7,47
+12,https://resources.premierleague.com/premierleague25/badges/45.svg,Norwich City,38,12,11,15,52,66,-14,47
+13,https://resources.premierleague.com/premierleague25/badges/56.svg,Sunderland,38,11,12,15,45,46,-1,45
+14,https://resources.premierleague.com/premierleague25/badges/110.svg,Stoke City,38,11,12,15,36,53,-17,45
+15,https://resources.premierleague.com/premierleague25/badges/111.svg,Wigan Athletic,38,11,10,17,42,62,-20,43
+16,https://resources.premierleague.com/premierleague25/badges/7.svg,Aston Villa,38,7,17,14,37,53,-16,38
+17,https://resources.premierleague.com/premierleague25/badges/52.svg,Queens Park Rangers,38,10,7,21,43,66,-23,37
+18,https://resources.premierleague.com/premierleague25/badges/30.svg,Bolton Wanderers,38,10,6,22,46,77,-31,36
+19,https://resources.premierleague.com/premierleague25/badges/5.svg,Blackburn Rovers,38,8,7,23,48,78,-30,31
+20,https://resources.premierleague.com/premierleague25/badges/39.svg,Wolverhampton Wanderers,38,5,10,23,40,82,-42,25
