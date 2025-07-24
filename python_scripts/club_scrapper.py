@@ -34,7 +34,7 @@ service = Service()  # UPDATE THIS PATH
 driver = webdriver.Chrome(service=service, options=chrome_options)
 
 # Setting the range for scraping all the game week data from the 2008/2009 season to the 2024/2025 season
-for year in range(2024, 2025, 1):
+for year in range(2016, 2025, 1):
 
 
     #========================================================================================================================================================
