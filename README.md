@@ -43,41 +43,44 @@ text
   ```python
   chrome_options.add_argument("--disable-blink-features=AutomationControlled")
   chrome_options.add_argument("user-agent=Mozilla/5.0...")
-  🚀 Key Features
-  Multi-Season Support: 2016/2017 to 2024/2025 seasons
   ```
 
-Pagination Handling: Automatic detection and navigation
+### 🚀 Key Features
 
-Dynamic Content Processing: Waits for AJAX-loaded elements
+1. **Multi-Season Support**: 2016/2017 to 2024/2025 seasons
 
-Error Resilience: Comprehensive exception handling
+1. **Pagination Handling**: Automatic detection and navigation
 
-Data Validation: Automatic fallback values for missing data
+1. **Dynamic Content Processing**: Waits for AJAX-loaded elements
 
-🛠️ Setup Instructions
+1. **Error Resilience**: Comprehensive exception handling
+
+1. **Data Validation**: Automatic fallback values for missing data
+
+### 🛠️ Setup Instructions
+
 Prerequisites
-Python 3.8+
 
-Chrome browser
+- **Python 3.8+**
+- **Chrome browser**
+- **ChromeDriver**
+- **bash**
 
-ChromeDriver
-
-bash
-
+```
 # Install dependencies
-
 pip install selenium pandas webdriver-manager
 
 # Run club scraper
-
 python club_scraper.py
 
 # Run player info scraper
-
 python player_info_scraper.py
-🧩 Data Points Collected
-Club Statistics
+```
+
+## 🧩 Data Points Collected
+
+### Club Statistics
+
 csv
 position,name,games_played,wins,draws,losses,goals_for,goals_against,points
 1,Arsenal,38,28,5,5,91,29,89
@@ -93,49 +96,54 @@ csv
 player_name,appearances,goals,assists,xG,xA,pass_accuracy,tackles,interceptions
 Declan Rice,37,7,8,4.2,5.7,91%,42,28
 ...
-🚧 Challenges Overcome
-Dynamic Content: Implemented explicit waits for AJAX-loaded elements
 
-python
+## 🚧 Challenges Overcome
+
+### 1. Dynamic Content: Implemented explicit waits for AJAX-loaded elements
+
+```
 WebDriverWait(driver, 15).until(
 EC.presence_of_element_located((By.CSS_SELECTOR, "tr.player-listings-row"))
 )
-Pagination: Autohmatic "Next" button detection and handling
 
-Season Filtering: Dynamic dropdown interaction
+```
 
-python
+### 2. Pagination: Autohmatic "Next" button detection and handling
 
-# Select season filter
+### 3. Season Filtering: Dynamic dropdown interaction
 
+```
 season_option = WebDriverWait(driver, 5).until(
 EC.element_to_be_clickable((By.XPATH, "//label[contains(., '2024/25')]"))
 )
 driver.execute_script("arguments[0].click();", season_option)
-Anti-Scraping Measures: Custom Chrome configuration and headers
+```
 
-Data Consistency: Automatic path creation and validation
+### 4. Anti-Scraping Measures: Custom Chrome configuration and headers
 
-python
+**Data Consistency: Automatic path creation and validation**
+
+```
 os.makedirs(directory_path, exist_ok=True)
-📈 Future Enhancements
-Add historical player statistics (2016-2023)
+```
 
-Implement cloud storage integration (AWS S3)
+## 📈 Future works
 
-Create automated data validation checks
+- **Add historical player statistics (2016-2023)**
 
-Build dashboard visualization (Streamlit/Power BI)
+-- **Implement cloud storage integration (AWS S3)**
 
-Add fixture and results scraping module
+- **Create automated data validation checks**
 
-⚠️ Ethical Note
-This project complies with Premier League website's robots.txt and:
+- **Build dashboard visualization (Streamlit/Power BI)**
 
-Uses 3-second delays between requests
+- **Add fixture and results scraping module**
 
-Limits scraping to off-peak hours
+## ⚠️ Ethical Note
 
-Stores data only for educational purposes
+**This project complies with Premier League website's robots.txt and**:
 
-Credits all data to Premier League Official Website
+- Uses 3-second delays between requests
+- Limits scraping to off-peak hours
+- Stores data only for educational purposes
+- Credits all data to Premier League Official Website
