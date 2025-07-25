@@ -29,8 +29,6 @@ datasets/
 ├── player_stats.csv
 └── premier_player_info.csv
 
-text
-
 ## ⚙️ Technical Implementation
 
 ### 🧩 Key Technologies
@@ -81,25 +79,32 @@ python player_info_scraper.py
 
 ### Club Statistics
 
-csv
-position,name,games_played,wins,draws,losses,goals_for,goals_against,points
-1,Arsenal,38,28,5,5,91,29,89
-2,Manchester City,38,27,7,4,93,33,88
+** Example **
+| position | name | games_played | wins | draws | losses | goals_for | goals_against | points |
+|----------|-----------------|--------------|------|-------|--------|-----------|---------------|--------|
+| 1 | Arsenal | 38 | 28 | 5 | 5 | 91 | 29 | 89 |
+| 2 | Manchester City | 38 | 27 | 7 | 4 | 93 | 33 | 88 |
+| ... | ... | ... | ... | ... | ... | ... | ... | ... |
 ...
-Player Profiles
-csv
-player_image_url,player_name,player_country,player_club,player_position,player_stats_url
-https://resources.premierleague.com/premierleague/photos/players/250x250/p165153.png,Bukayo Saka,England,Arsenal,Midfielder,https://www.premierleague.com/players/165153/Bukayo-Saka/stats
-...
-Player Statistics
-csv
-player_name,appearances,goals,assists,xG,xA,pass_accuracy,tackles,interceptions
-Declan Rice,37,7,8,4.2,5.7,91%,42,28
-...
+
+### Player Profiles
+
+** Example **
+| player_image_url | player_name | player_country | player_club | player_position | player_stats_url |
+|-------------------------------------------------------|--------------|----------------|-------------|------------------|-------------------------------------------------------|
+| ![Bukayo Saka](https://.../p165153.png) | Bukayo Saka | England | Arsenal | Midfielder | [Stats](https://www.premierleague.com/players/165153/Bukayo-Saka/stats) |
+| ... | ... | ... | ... | ... | ... |
+
+### Player Statistics
+
+| player_name | appearances | goals | assists |  xG |  xA | pass_accuracy | tackles | interceptions |
+| ----------- | ----------: | ----: | ------: | --: | --: | ------------: | ------: | ------------: |
+| Declan Rice |          37 |     7 |       8 | 4.2 | 5.7 |           91% |      42 |            28 |
+| ...         |         ... |   ... |     ... | ... | ... |           ... |     ... |           ... |
 
 ## 🚧 Challenges Overcome
 
-### 1. Dynamic Content: Implemented explicit waits for AJAX-loaded elements
+\*\* 1. Dynamic Content: Implemented explicit waits for AJAX-loaded elements
 
 ```
 WebDriverWait(driver, 15).until(
@@ -108,9 +113,9 @@ EC.presence_of_element_located((By.CSS_SELECTOR, "tr.player-listings-row"))
 
 ```
 
-### 2. Pagination: Autohmatic "Next" button detection and handling
+\*\* 2. Pagination: Autohmatic "Next" button detection and handling
 
-### 3. Season Filtering: Dynamic dropdown interaction
+\*\* 3. Season Filtering: Dynamic dropdown interaction
 
 ```
 season_option = WebDriverWait(driver, 5).until(
@@ -119,9 +124,9 @@ EC.element_to_be_clickable((By.XPATH, "//label[contains(., '2024/25')]"))
 driver.execute_script("arguments[0].click();", season_option)
 ```
 
-### 4. Anti-Scraping Measures: Custom Chrome configuration and headers
+\*\* 4. Anti-Scraping Measures: Custom Chrome configuration and headers
 
-**Data Consistency: Automatic path creation and validation**
+** 5. Data Consistency: Automatic path creation and validation**
 
 ```
 os.makedirs(directory_path, exist_ok=True)
@@ -131,7 +136,7 @@ os.makedirs(directory_path, exist_ok=True)
 
 - **Add historical player statistics (2016-2023)**
 
--- **Implement cloud storage integration (AWS S3)**
+- **Implement cloud storage integration (AWS S3)**
 
 - **Create automated data validation checks**
 
