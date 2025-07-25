@@ -104,7 +104,7 @@ python player_info_scraper.py
 
 ## 🚧 Challenges Overcome
 
-\*\* 1. Dynamic Content: Implemented explicit waits for AJAX-loaded elements
+1. **Dynamic Content: Implemented explicit waits for AJAX-loaded elements**
 
 ```
 WebDriverWait(driver, 15).until(
@@ -113,9 +113,9 @@ EC.presence_of_element_located((By.CSS_SELECTOR, "tr.player-listings-row"))
 
 ```
 
-\*\* 2. Pagination: Autohmatic "Next" button detection and handling
+1. **Pagination: Autohmatic "Next" button detection and handling**
 
-\*\* 3. Season Filtering: Dynamic dropdown interaction
+1. **Season Filtering: Dynamic dropdown interaction**
 
 ```
 season_option = WebDriverWait(driver, 5).until(
@@ -124,9 +124,9 @@ EC.element_to_be_clickable((By.XPATH, "//label[contains(., '2024/25')]"))
 driver.execute_script("arguments[0].click();", season_option)
 ```
 
-\*\* 4. Anti-Scraping Measures: Custom Chrome configuration and headers
+1. **Anti-Scraping Measures: Custom Chrome configuration and headers**
 
-** 5. Data Consistency: Automatic path creation and validation**
+1. **Data Consistency: Automatic path creation and validation**
 
 ```
 os.makedirs(directory_path, exist_ok=True)
